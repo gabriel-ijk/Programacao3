@@ -21,6 +21,10 @@ public class Main {
         }
         l1.adiciona(1,"b");
         System.out.println(l1);
+        System.out.println("removendo o elemento "+l1.remove(3));
+        System.out.println(l1);
+        System.out.println("qual a posição do 'e' na lista "+l1.posicaoDe("e"));
+        System.out.println("qual a posição do 'E' na lista "+l1.posicaoDe("E"));
     }
 
 }

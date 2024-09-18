@@ -21,7 +21,7 @@ public class Lista {
         if(posicao<0 || posicao>=tamanho)
             throw new IllegalArgumentException("Posição "+posicao+"é inválida");
         for(int i=tamanho-1;i>=posicao;i--){
-            elementos[i+1] = elementos[1];
+            elementos[i+1] = elementos[i];
         }
         elementos[posicao]=elemento;
         tamanho++;
@@ -41,6 +41,24 @@ public class Lista {
         if(posicao<0 || posicao>=tamanho)
             throw  new IllegalArgumentException("Posição "+posicao+" é inválida");
         return elementos [posicao];
+    }
+
+    public String remove(int posicao){
+        if(posicao<0 || posicao>=tamanho)
+            throw  new IllegalArgumentException("Posição "+posicao+" é inválida");
+        String copia = elementos[posicao];
+        for(int i=posicao;i<tamanho-1;i--){
+            elementos[i]=elementos[i=1];
+        }
+        tamanho--;
+        return copia;
+    }
+
+    public int posicaoDe(String elemento){
+        for(int i=0;i<tamanho;i++)
+            if(elementos[i].equals(elemento))
+                return i;
+            return -1;
     }
 
     /**
