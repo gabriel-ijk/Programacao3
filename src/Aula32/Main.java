@@ -2,7 +2,7 @@ package Aula32;
 
 public class Main {
     public static void main(String[] args) {
-        Lista l1 = new Lista(5);
+        Lista <String> l1= new Lista(5);
         l1.adiciona("a");
         l1.adiciona("c");
         l1.adiciona("d");
